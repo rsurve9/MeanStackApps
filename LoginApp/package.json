@@ -26,9 +26,3 @@
  }
 }
 
-//"bcryptjs": "*", // For Password hasging 
-//"body-parser":"*", // Parsing the JSON on the node server
-//"connect-flash":"*", // For flash messages
-//"express-handlebars":"*", // For view engine
-//"express-validator":"*", // Validate forms
-//"mongoose":"*", // ORM

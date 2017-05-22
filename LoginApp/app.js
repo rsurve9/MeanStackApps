@@ -20,9 +20,17 @@ var users = require('./routes/users');
 var app = express();
 
 // View Engine
+
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+app.get('/', function (req, res) {
+    res.render('index');
+});
+
 app.set('views', path.join(__dirname,'views'));
-app.engine('handlebars',exphbs({defaultLayout:'layout'}));
-app.set('view engine','handlebars');
+// app.engine('handlebars',exphbs({defaultLayout:'layout'}));
+// app.set('view engine','handlebars');
 
 // BodyParser Middleware
 app.use(bodyParser.json());
