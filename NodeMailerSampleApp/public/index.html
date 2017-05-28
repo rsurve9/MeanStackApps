@@ -1,0 +1,65 @@
+<!DOCTYPE>
+<html>
+
+<head>
+
+    
+<!--Import AngularJS library-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+</script>
+
+<!-- Put bootstrap in the head section to Load bootstrap when page loads.-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <title>
+        Email sending App
+    </title>
+</head>
+<body>
+
+<div class="container" ng-app="myApp" ng-controller="appCtrl">
+
+ <h1>Email sending App</h1>
+<br>
+ <div class="row form-group">
+    <div class="col-md-2">
+         <label for="email">Email:</label>
+    </div>
+    <div class="col-md-4">
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" ng-model="emailContents.emailId">
+    </div>
+ </div>
+
+ <div class="row form-group"> 
+    <div class="col-md-2">
+         <label for="emailSubject">Subject:</label>
+    </div>
+    <div class="col-md-4">
+        <input type="text" class="form-control" id="emailSubject" placeholder="Enter Subject" name="emailSubject" ng-model="emailContents.emailSubject">
+    </div>
+ </div>
+
+<div class="row form-group"> 
+    <div class="col-md-2">
+        <label for="emailBody">Email body:</label>          
+    </div>
+    <div class="col-md-4">
+        <textarea id="emailBody"  class="form-control" rows="4" cols="50" placeholder="Your message" ng-model="emailContents.emailBody"></textarea>
+    </div>
+ </div>
+
+<div class="row form-group"> 
+    <div class="col-md-2">
+        <button type="button" class="btn btn-primary" ng-click="sendEmail()">Send</button>
+    </div>
+    <div class="col-md-4"></div>
+ </div>
+
+<!-- Include the controller file-->
+<script src="controllers/controller.js"></script>
+</body>
+
+</html>
